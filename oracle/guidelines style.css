@@ -1,0 +1,232 @@
+/**
+ * Databaseline code repository
+ *
+ * Code for post: Oracle SQL and PL/SQL Code Standards
+ * Base URL:      http://databaseline.wordpress.com
+ * Post URL:      
+ * Author:        Ian Hellström
+ *
+ */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+/**
+ * Custom colours (light to dark):
+ *   blue:
+ *    .color-primary-1 { color: #857DB1 }
+ *    .color-primary-2 { color: #584E8D }
+ *    .color-primary-0 { color: #3D3377 }
+ *    .color-primary-3 { color: #221858 }
+ *    .color-primary-4 { color: #0F073B }
+ *
+ *   magenta:
+ *    .color-secondary-1-1 { color: #C180AD }
+ *    .color-secondary-1-2 { color: #9A4B82 }
+ *    .color-secondary-1-0 { color: #822D68 }
+ *    .color-secondary-1-3 { color: #601048 }
+ *    .color-secondary-1-4 { color: #40002D }
+ *
+ *   green:
+ *    .color-secondary-2-1 { color: #6DA398 }
+ *    .color-secondary-2-2 { color: #408275 }
+ *    .color-secondary-2-0 { color: #266E60 }
+ *    .color-secondary-2-3 { color: #0E5144 }
+ *    .color-secondary-2-4 { color: #00362C }
+ *
+ * See: http://paletton.com/#uid=5480X0kl2lDaFw0glpwqFg0w0aF.
+ */
+
+nav {
+  text-align: center;
+}
+
+body {
+  border-left: 1px solid #0F073B;
+  border-right: 1px solid #0F073B;
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 100%;
+  line-height: 140%;
+  margin: auto;
+  max-width: 60em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  padding: 0.1em 0.25em;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav ul li:hover {
+  background: #C180AD;
+}
+
+nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transiton: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -transition: opacity 0.5s;
+}
+
+nav ul li ul li {
+  background: #9A4B82;
+  display: block;
+  float: none;
+  z-index: 1;
+}
+
+nav ul li ul li:hover {
+  background: #C180AD;
+}
+
+nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li ul li a:link {
+  color: white;
+}
+
+nav ul li ul li a:visited {
+  color: #3D3377;
+}
+
+nav ul li ul li a code {
+  color: white;
+}
+
+nav ul li ul li a:visited code {
+  color: #3D3377;
+}
+
+pre {
+  background-color: #C180AD;
+  border: 1px dotted #9A4B82;
+  padding: 0.5em;
+  overflow: auto;
+}
+
+code {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #9A4B82;
+}
+
+pre code {
+  color: white;
+  line-height: 90%;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h1 code, h2 code, h3 code, h4 code, h5 code {
+  color: #584E8D;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  border-bottom: 1px dotted #C180AD;
+  color: #584E8D;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 130%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+h4 {
+  font-size: 110%;
+}
+
+h5 {
+  font-size: 90%;
+  font-style: italic;
+}
+
+h1.title {
+  border: none;
+  font-size: 200%;
+  font-weight: bold;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+  text-align: left;
+}
+
+a:link {
+  color: #3D3377;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #221858;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  padding-left: 0.25em;
+  padding-right: 1em;
+}
+
+table tr:nth-child(even) {
+  color: white;
+  background: #C180AD;
+}
+
+table tr:nth-child(odd) code {
+  color: black;
+}
+
+table tr:nth-child(even) code {
+  color: white;
+}
+
+#footer {
+  color: #601048;
+  font-size: 80%;
+  padding-top: 1em;
+  text-align: center;
+}
+
+#footer a:visited {
+  color: #601048;
+}
+
+#footer a:visited {
+  color: #6010487;
+}

@@ -1,0 +1,220 @@
+/* Core palette */
+@pal-black:  #06000a;
+@pal-purple: #300032;
+@pal-red:    #c43235;
+@pal-pale:   #e6e6e8;
+
+/* Extended palette */
+@pal-black-light:  lighten(@pal-black, 20%);
+@pal-purple-light: lighten(@pal-purple, 20%);
+@pal-red-dark:     darken(@pal-red, 20%);
+@pal-pale-dark:    darken(@pal-pale, 20%);
+
+/* Colours */
+@col-text: @pal-black;
+@col-code-background:     @pal-pale-dark;
+@col-code-highlight:      @pal-red-dark;
+
+@col-link:                @pal-purple-light;
+@col-alert:               @pal-red;
+
+@col-background:          @pal-pale;
+
+@col-inverse:             @pal-pale;
+@col-inverse-background:  @pal-black;
+@col-inverse-text:        @pal-pale;
+@col-inverse-text-shadow: @pal-pale-dark;
+
+/* Fonts */
+@font-family-text:  'Lusitana', serif;
+@font-family-title: 'Ubuntu Condensed', sans-serif;
+@font-family-code:  'Ubuntu Mono', monospace;
+
+@font-weight-title:     bold;
+@font-size-h1:          3em;
+@font-size-h2:          2em;
+@font-size-h3:          1.6em;
+@font-size-remark-code: 0.6em;
+@font-size-slide-code:  0.6em;
+@font-size-slide-pre:   0.6em;
+
+/* Miscellaneous */
+@border-radius-code:  0.2em;
+@line-height-list:    1.2em;
+@line-height-inverse: 0.8em;
+@padding-slide-pre:   0.1em;
+
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+  font-family: @font-family-text;
+}
+h1 {
+  font-family: @font-family-title;
+  font-weight: @font-weight-title;
+  margin-bottom: 0;
+}
+h2 {
+  font-family: @font-family-title;
+  font-weight: @font-weight-title;
+  margin-bottom: 0;
+}
+h3 {
+  font-family: @font-family-title;
+  font-weight: @font-weight-title;
+  margin-bottom: 0;
+}
+.remark-slide-content {
+  h1 {
+    font-size: @font-size-h1;
+  }
+  h2 {
+    font-size: @font-size-h2;
+  }
+  h3 {
+    font-size: @font-size-h3;
+  }
+}
+.footnote {
+  position: absolute;
+  bottom: 3em;
+}
+li {
+  p {
+    line-height: @line-height-list;
+  }
+}
+.alert {
+  color: @col-alert;
+}
+.large {
+  font-size: @font-size-h2;
+}
+a {
+  color: @col-link;
+  text-decoration: none;
+  >code {
+    color: @col-link;
+    text-decoration: none;
+  }
+}
+code {
+  background: @col-background;
+  border-radius: @border-radius-code;
+}
+.remark-code {
+  font-family: @font-family-code;
+  font-size: @font-size-remark-code;
+}
+.remark-inline-code {
+  font-family: @font-family-code;
+}
+.remark-code-line-highlighted {
+  background-color: @col-code-highlight;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ {
+  p {
+    clear: both;
+  }
+}
+#slideshow {
+  .slide {
+    .content {
+      code {
+        font-size: @font-size-slide-code;
+      }
+      pre {
+        code {
+          font-size: @font-size-slide-pre;
+          padding: @padding-slide-pre;
+        }
+      }
+    }
+  }
+}
+.inverse {
+  background: @col-inverse-background;
+  color: @col-inverse;
+  text-shadow: 0 0 20px @col-inverse-text-shadow;
+  h1 {
+    color: @col-background;
+    line-height: @line-height-inverse;
+  }
+  h2 {
+    color: @col-background;
+    line-height: @line-height-inverse;
+  }
+}
+#slide-inverse {
+  .footnote {
+    bottom: 12px;
+    left: 20px;
+  }
+}
+#slide-how {
+  .slides {
+    font-size: 0.9em;
+    position: absolute;
+    top: 151px;
+    right: 140px;
+    h3 {
+      margin-top: 0.2em;
+    }
+    .first {
+      padding: 1px 20px;
+      height: 90px;
+      width: 120px;
+      -moz-box-shadow: 0 0 10px @col-inverse-text;
+      -webkit-box-shadow: 0 0 10px @col-inverse-text;
+      box-shadow: 0 0 10px @col-inverse-text;
+      background: white;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 1;
+    }
+    .second {
+      padding: 1px 20px;
+      height: 90px;
+      width: 120px;
+      -moz-box-shadow: 0 0 10px @col-inverse-text;
+      -webkit-box-shadow: 0 0 10px @col-inverse-text;
+      box-shadow: 0 0 10px @col-inverse-text;
+      position: relative;
+      background: white;
+      z-index: 0;
+    }
+  }
+}
+.left-column {
+  color: @col-inverse-text;
+  width: 20%;
+  height: 92%;
+  float: left;
+  h2 {
+    &:last-of-type {
+      color: @col-text;
+    }
+  }
+  h3 {
+    &:last-child {
+      color: @col-text;
+    }
+  }
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
