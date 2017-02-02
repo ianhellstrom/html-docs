@@ -5,7 +5,7 @@ class: center, middle, inverse
 # Application Development with Apache Spark
 A brief tutorial for beginners
 
-[Ian Hellstrom](http://databaseline.wordpress.com)
+[Ian Hellstrom](https://databaseline.bitbucket.io)
 ---
 ## Where do I start?
 ---
@@ -715,6 +715,6 @@ A `DataFrame` is an RDD with a schema; Spark SQL infers the schema when it loads
 * [ScalaTest's user guide](http://www.scalatest.org/user_guide)
 * Pat McDonough's [2013 Spark Summit tutorial](http://spark-summit.org/wp-content/uploads/2013/10/McDonough-spark-tutorial_spark-summit-2013.pptx)
 * [Willem Meints'](http://fizzylogic.nl/2015/11/10/spark-101-writing-your-first-spark-app) [Spark 101](http://fizzylogic.nl/2015/11/12/spark-101-integration-with-data-sources)
-* Ian Hellström's [sparkSetup.sh and updateAppConfig.sh](http://bitbucket.org/hell316/dbline/src/) shell scripts (see: `bash`)
+* Ian Hellström's [sparkSetup.sh and updateAppConfig.sh](http://bitbucket.org/databaseline/bash) shell scripts (see: `spark`)
 * SequenceIQ's [posts on Spark](http://blog.sequenceiq.com/blog/categories/spark)
 * [Spark in Action](http://www.manning.com/books/spark-in-action)
