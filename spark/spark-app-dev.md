@@ -5,7 +5,7 @@ class: center, middle, inverse
 # Application Development with Apache Spark
 A brief tutorial for beginners
 
-[Ian Hellstrom](https://databaseline.bitbucket.io)
+[Ian Hellström](https://databaseline.tech)
 ---
 ## Where do I start?
 ---
